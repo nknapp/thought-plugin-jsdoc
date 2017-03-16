@@ -5,13 +5,20 @@
  * Released under the MIT license.
  */
 
-'use strict'
+const path = require('path')
 
-module.exports = thoughtPluginJsdoc
+
 /**
  * Describe your module here
  * @public
  */
-function thoughtPluginJsdoc () {
-  return "my name is thoughtPluginJsdoc"
+module.exports = function thoughtPluginJsdoc (customize) {
+  return customize.merge({
+    handlebars: {
+      helpers: require.resolve('./helpers.js'),
+      partials: path.join(__dirname, 'partials')
+    }
+  })
 }
+
+module.exports.package = require('../package')
