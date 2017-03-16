@@ -1,0 +1,53 @@
+{
+  "name": "thought-plugin-jsdoc",
+  "version": "0.0.0",
+  "description": "Add jsdoc to your readme",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nknapp/thought-plugin-jsdoc.git"
+  },
+  "homepage": "https://github.com/nknapp/thought-plugin-jsdoc",
+  "author": {
+    "name": "Nils Knappmeier",
+    "email": "npm@knappi.org",
+    "url": "https://github.com/nknapp"
+  },
+  "bugs": {
+    "url": "https://github.com/nknapp/thought-plugin-jsdoc/issues"
+  },
+  "main": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint --fix .",
+    "test": "mocha --recursive && npm lint",
+    "coverage": "istanbul cover ./node_modules/.bin/_mocha --report lcovonly",
+    "prethought": "thought --version || npm -g install thought",
+    "thought": "thought run -a",
+    "preversion": "thought --version || npm -g install thought",
+    "version": "thoughtful changelog -o -a && npm run thought"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "dirty-chai": "^1.2.2",
+    "eslint": "^3.17.1",
+    "eslint-config-standard": "^7.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.1.1",
+    "husky": "^0.13.2",
+    "mocha": "^3.2.0",
+    "thoughtful-release": "^0.3.1",
+    "trace-and-clarify-if-possible": "^1.0.0"
+  },
+  "standard": {
+    "ignore": [
+      "test/fixtures/**"
+    ]
+  },
+  "files": [
+    "src"
+  ],
+  "keywords": []
+}
