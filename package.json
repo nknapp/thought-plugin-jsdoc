@@ -19,8 +19,9 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint --fix .",
-    "test": "mocha --recursive && npm lint",
+    "test": "mocha && npm run lint",
     "coverage": "istanbul cover ./node_modules/.bin/_mocha --report lcovonly",
+    "postcoverage": "istanbul check-coverage coverage/coverage.json --statements 100",
     "prethought": "thought --version || npm -g install thought",
     "thought": "thought run -a",
     "preversion": "thought --version || npm -g install thought",
@@ -45,6 +46,7 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^2.1.1",
     "husky": "^0.13.2",
+    "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
     "thoughtful-release": "^0.3.1",
     "trace-and-clarify-if-possible": "^1.0.0"
