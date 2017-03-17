@@ -24,20 +24,25 @@ module.exports = {
    */
   jsdoc: function (globPattern, headerPrefix, options, customize) {
     return glob(globPattern)
-      .then(files => Promise.all(
-        files.map((file) => {
-          return fs.readFileAsync(file, {encoding: 'utf-8'})
-            .then(contents => {
-              const parsed = dox.parseComments(contents).filter((comment) => !comment.isPrivate)
-              const markdown = doxme(parsed).replace(/^(#+)/gm,`${headerPrefix}$1`)
-              return {
-                multipleFiles: files.length > 1,
-                file,
-                markdown,
-                parsed
-              }
-            })
-        })
-      ))
+      .then(files => {
+        if (files.length === 0) {
+          throw new Error(`Could not find file(s) "${globPattern}" to extract jsdoc-comments from.`)
+        }
+        return Promise.all(
+          files.map((file) => {
+            return fs.readFileAsync(file, {encoding: 'utf-8'})
+              .then(contents => {
+                const parsed = dox.parseComments(contents).filter((comment) => !comment.isPrivate)
+                const markdown = doxme(parsed).replace(/^(#+)/gm, `${headerPrefix}$1`)
+                return {
+                  multipleFiles: files.length > 1,
+                  file,
+                  markdown,
+                  parsed
+                }
+              })
+          })
+        )
+      })
   }
 }

@@ -7,7 +7,6 @@
 
 const path = require('path')
 
-
 /**
  * Describe your module here
  * @public
