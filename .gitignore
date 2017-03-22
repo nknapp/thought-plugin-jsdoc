@@ -1,2 +1,4 @@
 node_modules
 *.iml
+/coverage/
+test/fixtures/scenarios/*/actual.md

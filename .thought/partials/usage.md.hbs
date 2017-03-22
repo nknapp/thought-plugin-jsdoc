@@ -1,0 +1,40 @@
+## Usage
+
+In order to use this plugin for {{npm 'thought'}},
+first add it to the dev-dependencies of your project
+
+```bash
+npm install --save-dev {{name}}
+```
+
+You can then add a file `.thought/config.js` to your 
+project, with the following contents.
+
+{{include 'examples/example.js'}}
+
+Thought will then add the jsdoc-comments of your main-file to the README.md
+
+## Configuration 
+
+This plugin applies the following configuration
+
+{{#thought-plugin-config}}
+{{#if handlebars.partials}}
+### Partials
+{{#each handlebars.partials}}
+#### [{{@key}}]({{path}})
+    
+```hbs
+{{{contents}}}
+```
+{{/each}}        
+{{/if}}
+
+### Helpers
+
+{{#jsdoc handlebars.helpers '#'}}
+{{markdown}}
+{{/jsdoc}}
+
+{{json this}}
+{{/thought-plugin-config}}

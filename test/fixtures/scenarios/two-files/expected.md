@@ -1,41 +1,42 @@
 ## apidocs
 
-##  API-reference
-    
-### test/fixtures/scenarios/two-files/input1.js
 
-#### &#x60;exports(param1, param1)&#x60;
-
-Lorem ipsum dolor sit amed.
-
-#### Parameters
-
-| parameter | type   | description                          |
-| --------- | ------ | ------------------------------------ |
-| &#x60;param1&#x60;  | number | A paramater                          |
-| &#x60;param1&#x60;  | string | Another paramater with a longer name |
+## API reference ([test/fixtures/scenarios/two-files/input1.js](test/fixtures/scenarios/two-files/input1.js))
 
 
 
-    
-### test/fixtures/scenarios/two-files/input2.js
+###  exports(param1, param1)
 
-#### &#x60;exports(param1, param1)&#x60;
 
-Lorem ipsum dolor sit amed.
+**Lorem ipsum dolor sit amed.**
+
+
+
 
 #### Parameters
 
-| parameter | type   | description                          |
-| --------- | ------ | ------------------------------------ |
-| &#x60;param1&#x60;  | number | A paramater                          |
-| &#x60;param1&#x60;  | string | Another paramater with a longer name |
+| Name | Type | Description |
+|------|------|-------------|
+| param1 | <code>number</code> | A paramater |
+| param1 | <code>string</code> | Another paramater with a longer name |
+
+
+## API reference ([test/fixtures/scenarios/two-files/input2.js](test/fixtures/scenarios/two-files/input2.js))
 
 
 
-#### &#x60;privateFunction&#x60;
-
-This text should not appear in the jsdocs
+###  exports(param1, param1)
 
 
+**Lorem ipsum dolor sit amed.**
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|------|------|-------------|
+| param1 | <code>number</code> | A paramater |
+| param1 | <code>string</code> | Another paramater with a longer name |
 

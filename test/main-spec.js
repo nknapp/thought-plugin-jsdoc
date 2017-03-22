@@ -25,7 +25,7 @@ const thought = require('customize')()
 describe('thought-plugin-jsdoc:', function () {
   it('the config should have a jsdoc-helper', function () {
     return thought.buildConfig().then(config => {
-      expect(config.handlebars.helpers.jsdoc).to.be.ok()
+      expect(config.handlebars.helpers.dox).to.be.ok()
     })
   })
 
@@ -50,6 +50,7 @@ describe('thought-plugin-jsdoc:', function () {
         .run()
         .then(result => {
           const expected = fs.readFileSync(`${scenarioDir}/expected.md`, {encoding: 'utf-8'})
+          fs.writeFileSync(`${scenarioDir}/actual.md`, result.handlebars['index.md'])
           expect(result.handlebars['index.md']).to.equal(expected)
         })
     })

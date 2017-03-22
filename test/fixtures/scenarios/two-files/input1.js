@@ -7,7 +7,7 @@
  *
  * @api public
  */
-module.exports = function simpleFunction(param1, param2) {
+module.exports = function input1 (param1, param2) {
 
 }
 

@@ -1,0 +1,32 @@
+{{!--
+  Render a single dox-comment 
+  @params {{boolean}} showVisibility whether or not to add a "public" tag in front of the function name
+--}}
+
+### {{#if showVisibility}}*({{visibility}})*{{/if}} {{{name}}}{{signature}}
+
+
+**{{{description.summary}}}**
+
+{{{description.body}}}
+
+{{#if params}}
+
+#### Parameters
+
+| Name | Type | Description |
+|------|------|-------------|
+{{#each params~}}
+| {{{name}}} | <code>{{#doxEachSeparated types ' &#124; '}}{{.}}{{/doxEachSeparated}}</code> | {{{doxSingleLine description}}} |
+{{/each}}
+{{/if}}
+
+{{#if returns}}
+#### Return value:
+
+| Type | Description |
+|------|-------------|
+{{#with returns~}}
+| <code>{{#doxEachSeparated types ' &#124; '}}{{.}}{{/doxEachSeparated}}</code> | {{{doxSingleLine description}}} |
+{{/with}}
+{{/if}}

@@ -1,11 +1,5 @@
 {{#if package.main}}
-##  API-reference
-{{#each (jsdoc package.main '#')}}
-{{#if multipleFiles}}
-    
-### {{file}}
-{{/if}}
-{{markdown}}
-{{/each}}
-
+{{#dox package.main}}
+{{>dox/files.md}}
+{{/dox}}
 {{/if}}
