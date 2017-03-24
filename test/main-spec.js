@@ -25,7 +25,7 @@ const thought = require('customize')()
 describe('thought-plugin-jsdoc:', function () {
   it('the config should have a jsdoc-helper', function () {
     return thought.buildConfig().then(config => {
-      expect(config.handlebars.helpers.dox).to.be.ok()
+      expect(config.handlebars.helpers.jsdoc).to.be.ok()
     })
   })
 
@@ -35,7 +35,7 @@ describe('thought-plugin-jsdoc:', function () {
       thought
         .merge(packageJsonMain('a-non-existing-file.js'))
         .run()
-    ).to.be.rejectedWith(`Could not find file(s) "a-non-existing-file.js" to extract jsdoc-comments from.`)
+    ).to.be.rejectedWith(`These files do not exist: a-non-existing-file.js`)
   })
 
   // Computed test-cases for different scenarios, see path below

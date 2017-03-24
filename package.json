@@ -1,7 +1,7 @@
 {
   "name": "thought-plugin-jsdoc",
   "version": "0.0.0",
-  "description": "Add jsdoc to your readme",
+  "description": "Add jsdoc to your Thought-generated README.md",
   "repository": {
     "type": "git",
     "url": "git@github.com:nknapp/thought-plugin-jsdoc.git"
@@ -23,15 +23,13 @@
     "coverage": "istanbul cover ./node_modules/.bin/_mocha",
     "postcoverage": "istanbul check-coverage coverage/coverage.json --statements 100",
     "prethought": "thought --version || npm -g install thought",
-    "thought": "thought run -a",
+    "thought": "thought run -a && cd examples/example-project && thought run -a",
     "preversion": "thought --version || npm -g install thought",
     "version": "thoughtful changelog -o -a && npm run thought",
     "markserv": "markserv"
   },
   "dependencies": {
-    "bluebird": "^3.5.0",
-    "dox": "^0.9.0",
-    "glob": "^7.1.1"
+    "jsdoc-to-markdown": "^3.0.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -45,6 +43,7 @@
     "eslint-plugin-node": "^4.2.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^2.1.1",
+    "glob": "^7.1.1",
     "husky": "^0.13.2",
     "istanbul": "^0.4.5",
     "markserv": "^0.1.1",

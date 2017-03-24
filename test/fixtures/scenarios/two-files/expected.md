@@ -1,42 +1,27 @@
-## apidocs
+# API reference
 
+## Functions
 
-## API reference ([test/fixtures/scenarios/two-files/input1.js](test/fixtures/scenarios/two-files/input1.js))
+<dl>
+<dt><a href="#privateFunction">privateFunction()</a></dt>
+<dd><p>This text should not appear in the jsdocs</p>
+</dd>
+<dt><a href="#privateFunction">privateFunction()</a></dt>
+<dd><p>This text should not appear in the jsdocs</p>
+</dd>
+</dl>
 
+<a name="privateFunction"></a>
 
+## privateFunction()
+This text should not appear in the jsdocs
 
-###  exports(param1, param1)
+**Kind**: global function  
+**Api**: private  
+<a name="privateFunction"></a>
 
+## privateFunction()
+This text should not appear in the jsdocs
 
-**Lorem ipsum dolor sit amed.**
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|------|------|-------------|
-| param1 | <code>number</code> | A paramater |
-| param1 | <code>string</code> | Another paramater with a longer name |
-
-
-## API reference ([test/fixtures/scenarios/two-files/input2.js](test/fixtures/scenarios/two-files/input2.js))
-
-
-
-###  exports(param1, param1)
-
-
-**Lorem ipsum dolor sit amed.**
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|------|------|-------------|
-| param1 | <code>number</code> | A paramater |
-| param1 | <code>string</code> | Another paramater with a longer name |
+**Kind**: global function  
 

@@ -4,15 +4,17 @@ In order to use this plugin for {{npm 'thought'}},
 first add it to the dev-dependencies of your project
 
 ```bash
-npm install --save-dev {{name}}
+npm install --save-dev {{package.name}}
 ```
 
 You can then add a file `.thought/config.js` to your 
 project, with the following contents.
 
-{{include 'examples/example.js'}}
+{{example 'examples/example-project/.thought/config.js'}}
 
 Thought will then add the jsdoc-comments of your main-file to the README.md
+
+You can see this in [the example-project](examples/example-project)
 
 ## Configuration 
 
@@ -23,6 +25,7 @@ This plugin applies the following configuration
 ### Partials
 {{#each handlebars.partials}}
 #### [{{@key}}]({{path}})
+
     
 ```hbs
 {{{contents}}}
@@ -32,9 +35,6 @@ This plugin applies the following configuration
 
 ### Helpers
 
-{{#jsdoc handlebars.helpers '#'}}
-{{markdown}}
-{{/jsdoc}}
-
-{{json this}}
+{{jsdoc handlebars.helpers}}
+    
 {{/thought-plugin-config}}
