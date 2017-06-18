@@ -8,6 +8,16 @@ const jsdoc2md = require('jsdoc-to-markdown')
  */
 function jsdoc (globPattern) {
   return jsdoc2md.render({files: globPattern})
+    .catch((e) => {
+      if (e.name === 'JSDOC_ERROR') {
+        // Backward compatibility: Deprecated for 2.0
+        throw e
+      }
+      // Give a hint where other errors occur, but include the original error
+      const error = new Error(`Error while rendering jsdoc for "${globPattern}": ${e.message}`)
+      error.cause = e
+      throw error
+    })
 }
 
 module.exports = {
