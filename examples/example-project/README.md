@@ -87,7 +87,7 @@ multiply(4,5) // == 20
 
 
 
-## License
+# License
 
 `example-project` is published under the ISC-license.
 
@@ -95,6 +95,6 @@ No file "LICENSE*" found
 
 
  
-## Contributing guidelines
+# Contributing guidelines
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
