@@ -1,6 +1,6 @@
 # thought-plugin-jsdoc 
 
-[![NPM version](https://badge.fury.io/js/thought-plugin-jsdoc.svg)](http://badge.fury.io/js/thought-plugin-jsdoc)
+[![NPM version](https://img.shields.io/npm/v/thought-plugin-jsdoc.svg)](https://npmjs.com/package/thought-plugin-jsdoc)
 [![Travis Build Status](https://travis-ci.org/nknapp/thought-plugin-jsdoc.svg?branch=master)](https://travis-ci.org/nknapp/thought-plugin-jsdoc)
 [![Coverage Status](https://img.shields.io/coveralls/nknapp/thought-plugin-jsdoc.svg)](https://coveralls.io/r/nknapp/thought-plugin-jsdoc)
 [![Greenkeeper badge](https://badges.greenkeeper.io/nknapp/thought-plugin-jsdoc.svg)](https://greenkeeper.io/)

@@ -1,6 +1,6 @@
 {
   "name": "thought-plugin-jsdoc",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Add jsdoc to your Thought-generated README.md",
   "repository": {
     "type": "git",
