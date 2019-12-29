@@ -1,12 +1,11 @@
 sudo: false
 language: "node_js"
 node_js:
-  - "6"
-  - "7"
+  - "lts"
+  - "node"
 script:
   - npm install
   - npm run coverage
   - npm run lint
 after_script:
-  - npm install coveralls
-  - cat ./coverage/lcov.info | coveralls
+  - cat ./coverage/lcov.info | npx coveralls

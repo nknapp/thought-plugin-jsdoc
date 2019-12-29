@@ -44,7 +44,7 @@ describe('thought-plugin-jsdoc:', function () {
         thought
           .merge(packageJsonMain('a-non-existing-file.js'))
           .run()
-      ).to.be.rejectedWith(`These files do not exist: a-non-existing-file.js`)
+      ).to.be.rejectedWith('These files do not exist: a-non-existing-file.js')
     })
 
     it('the plugin should mention that an error has occured during jsdoc creation', function () {
@@ -57,7 +57,7 @@ describe('thought-plugin-jsdoc:', function () {
         thought
           .merge(packageJsonMain('javascript-file.js'))
           .run()
-      ).to.be.rejectedWith(`Error while rendering jsdoc for "javascript-file.js": Some test-error`)
+      ).to.be.rejectedWith('Error while rendering jsdoc for "javascript-file.js": Some test-error')
     })
   })
 
@@ -73,7 +73,7 @@ describe('thought-plugin-jsdoc:', function () {
           .merge(packageJsonMain(`${scenarioDir}/input*.js`))
           .run()
           .then(result => {
-            const expected = fs.readFileSync(`${scenarioDir}/expected.md`, {encoding: 'utf-8'})
+            const expected = fs.readFileSync(`${scenarioDir}/expected.md`, { encoding: 'utf-8' })
             fs.writeFileSync(`${scenarioDir}/actual.md`, result.handlebars['index.md'])
             expect(result.handlebars['index.md']).to.equal(expected)
           })
@@ -89,5 +89,5 @@ describe('thought-plugin-jsdoc:', function () {
  * @returns {{handlebars: {data: {package: {main: string}}}}}
  */
 function packageJsonMain (file) {
-  return {handlebars: {data: {'package': {'main': file}}}}
+  return { handlebars: { data: { package: { main: file } } } }
 }

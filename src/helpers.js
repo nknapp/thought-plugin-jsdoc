@@ -7,7 +7,7 @@ const jsdoc2md = require('jsdoc-to-markdown')
  * @api public
  */
 function jsdoc (globPattern) {
-  return jsdoc2md.render({files: globPattern})
+  return jsdoc2md.render({ files: globPattern })
     .catch((e) => {
       if (e.name === 'JSDOC_ERROR') {
         // Backward compatibility: Deprecated for 2.0
